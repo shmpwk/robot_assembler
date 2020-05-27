@@ -14,8 +14,10 @@ act_client.wait_for_server()
 traj_msg = FollowJointTrajectoryGoal()
 traj_msg.trajectory.header.stamp = rospy.Time.now() + rospy.Duration(0.2)
 traj_msg.trajectory.joint_names = ['JOINT0', 'JOINT1', 'JOINT2', 'JOINT3', 'JOINT4', 'JOINT5', 'JOINT6', 'JOINT7', 'JOINT8', 'JOINT9', 'JOINT10', 'JOINT11']
+#traj_msg.trajectory.joint_names = ['JOINT0']
 
 ##
+
 traj_msg.trajectory.points.append(JointTrajectoryPoint(positions=[0, 0, 0.20, -0.40, 0.20, 0,   0, 0, 0.20, -0.40, 0.20, 0 ], #姿勢1
                                                        time_from_start = rospy.Duration(2))) ## 前の姿勢から2sec
 traj_msg.trajectory.points.append(JointTrajectoryPoint(positions=[0, 0, 0.40, -0.80, 0.40, 0,   0, 0, 0.40, -0.80, 0.40, 0 ], #姿勢2
@@ -24,6 +26,8 @@ traj_msg.trajectory.points.append(JointTrajectoryPoint(positions=[0, 0, 0.20, -0
                                                        time_from_start = rospy.Duration(10)))## 前の姿勢から4sec
 traj_msg.trajectory.points.append(JointTrajectoryPoint(positions=[0, 0, 0.15, -0.3, 0.15, 0,   0, 0, 0.15, -0.3, 0.15, 0 ], #姿勢4
                                                        time_from_start = rospy.Duration(12)))## 前の姿勢から2sec
+
+#traj_msg.trajectory.points.append(JointTrajectoryPoint(positions=[1], time_from_start = rospy.Duration(2)))
 
 # send to robot arm
 act_client.send_goal(traj_msg)
