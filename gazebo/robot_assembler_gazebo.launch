@@ -2,15 +2,10 @@
   <arg name="model"  default="" />
   <arg name="paused" default="false" />
   <!--arg name="gzangles" default="-J JOINT0 -0.2" / use with paused -->
-<<<<<<< Updated upstream
   <arg name="gzangles" default="" />
   <arg name="gzpose" default=" -z 0.3" />
-=======
-  <arg name="gzangles" default="-J JOINT0 0.1 -J JOINT3 -0.1" />
-  <arg name="gzpose" default=" -z 0.04" />
->>>>>>> Stashed changes
   <arg name="control_config" default="$(arg model).gz_controller.yaml" />
-
+  <arg name="world_name" default="worlds/empty.world" />
   <arg name="use_xacro" default="false" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
