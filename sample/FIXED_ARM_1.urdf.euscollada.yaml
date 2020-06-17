@@ -10,4 +10,4 @@ rarm:
   - JOINT7 : rarm-JOINT7
 
 sensors:
- - {sensor_name: 'range_sensor', sensor_type: 'range', parent_link: 'LINK6', translate: '-0.03 0 0', rotate: '-0.57735 -0.57735 0.57735 120'}
+ - {sensor_name: 'range_sensor', sensor_type: 'range', parent_link: 'LINK6', translate: '-0.03 0 0', rotate: '-0.57735 -0.57735 0.57735 0'}

@@ -6,6 +6,7 @@ joint_state_controller:
 fullbody_controller:
 #  type: effort_controllers/JointTrajectoryController
   type: velocity_controllers/JointTrajectoryController
+
   joints:
     - JOINT0
     - JOINT1
