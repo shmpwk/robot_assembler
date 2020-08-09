@@ -2,15 +2,26 @@
   <arg name="model"  default="" />
   <arg name="paused" default="false" />
   <!--arg name="gzangles" default="-J JOINT0 -0.2" / use with paused -->
-  <arg name="gzangles" default="" />
-  <arg name="gzpose" default=" -z 0.3" />
+  <!--arg name="gzangles" default="-J JOINT21 -0.60 -J JOINT28 0.60"/ this adjust the pose of the robot -->
+  <arg name="gzangles" default="-J JOINT0 0" />
+  <!-- arg name="gzpose" default=" -z 0.2316" /-->
+  <arg name="gzpose" default=" -z 0.258 -P 0.2"/>
+  <!-- arg name="gzpose" default=" -z 0" /-->
   <arg name="control_config" default="$(arg model).gz_controller.yaml" />
   <arg name="world_name" default="worlds/empty.world" />
   <arg name="use_xacro" default="false" />
+  <arg name="physics" default="dart" />
 
+  <!--include file="$(find robot_assembler)/launch/display.launch"-->
+     <!--arg name="rvizconfig" value="$(find robot_assembler)/gazebo/view_urdf.rviz" /-->
+     <!--arg name="model" value="$(find robot_assembler)/outputs/0810_robot.urdf" /-->
+  <!--/include-->
+  
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
     <arg name="paused" value="$(arg paused)" />
-    <arg name="world_name" value="$(find robot_assembler)/worlds/tabletop.world" />
+    <arg name="world_name" value="$(find robot_assembler)/gazebo/worlds/table_manipulation.world" />
+    <!-- arg name="world_name" value="$(arg world_name)" / -->
+    <arg name="physics" value="$(arg physics)" />
   </include>
 
   <!-- Load universal robotic description format (URDF) -->
@@ -35,4 +46,6 @@
                               joint_state_controller
                               fullbody_controller" />
 
+
 </launch>
+

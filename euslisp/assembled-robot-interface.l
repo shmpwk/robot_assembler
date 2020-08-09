@@ -1,5 +1,10 @@
 (require :robot-interface "package://pr2eus/robot-interface.l")
 
+;; (require :tmp2_robot "package://robot_assembler/sample/FIXED_ARM_1.l")
+;; (defvar *assembled-robot-class* FIXED_ARM-robot)
+(require :tmp2_robot "package://robot_assembler/outputs/0810_robot.l")
+(defvar *assembled-robot-class* tmp2_robot-robot)
+
 (defclass assembled-robot-interface
   :super robot-interface
   :slots ())

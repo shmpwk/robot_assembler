@@ -1,0 +1,58 @@
+rarm:
+  - JOINT0: rarm-joint0  #sholder
+  - JOINT1: rarm-joint1
+  - JOINT2: rarm-joint2 
+  - JOINT3: rarm-joint3
+  - JOINT4: rarm-joint4
+  - JOINT5: rarm-joint5
+  - JOINT6: rarm-joint6
+  - JOINT7: rarm-joint7  #hand
+larm:
+  - JOINT8: larm-joint0
+  - JOINT9: larm-joint1
+  - JOINT10: larm-joint2
+  - JOINT11: larm-joint3
+  - JOINT12: larm-joint4
+  - JOINT13: larm-joint5
+  - JOINT14: larm-joint6
+  - JOINT15: larm-joint7
+lleg:
+  - JOINT16: lleg-joint0
+  # - JOINT17: lleg-joint1
+  - JOINT18: lleg-joint1
+  # - JOINT19: lleg-joint2
+  - JOINT20: lleg-joint2
+  # - JOINT21: lleg-joint3
+  - JOINT22: lleg-joint3
+rleg:
+  - JOINT23: rleg-joint0
+  # - JOINT24: rleg-joint1
+  - JOINT25: rleg-joint1
+  # - JOINT26: rleg-joint2
+  - JOINT27: rleg-joint2
+  # - JOINT28: rleg-joint4
+  - JOINT29: rleg-joint3
+angle-vector:
+  reset-pose:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+larm-end-coords:
+  parent: LINK15 
+  translate: [0, 0, 0]
+  rotate: [0, 1, 0, 0]
+rarm-end-coords:
+  parent: LINK7
+  translate: [0, 0, 0]
+  rotate: [0, 1, 0, 0]
+lleg-end-coords:
+  parent: LINK22
+  translate: [0, 0, 0]
+  rotate: [0, 1, 0, 0]
+rleg-end-coords:
+  parent: LINK29
+  translate: [0, 0, 0]
+  rotate: [0, 1, 0, 0]
+sensors:
+  #- {sensor_name: 'imu_sensor', sensor_type: 'acceleration', parent_link: 'BASE', gazebo_frame: 'BASE'}
+  - {sensor_name: 'head_depth', sensor_type: 'camera', parent_link: 'BASE', gazebo_type: 'depth', translate: '0.03 0 0', rotate: '0.57735 0.57735 -0.57735 0'}
+  - {sensor_name: 'head_cam', sensor_type: 'camera', gazebo_type: 'camera', parent_link: 'BASE', translate: '0.03 0 0', rotate: '0.57735 0.57735 -0.5735 0'}
+  #- {sensor_name: 'rhsensor', sensor_type: 'base_force6d', parent_link: 'rarm', gazebo_joint: 'JOINT7' , gazebo_topic: 'rhsensor'}
+  #- {sensor_name: 'lhsensor', sensor_type: 'base_force6d', parent_link: 'larm', gazebo_joint: 'JOINT15', gazebo_topic: 'lhsensor'}
