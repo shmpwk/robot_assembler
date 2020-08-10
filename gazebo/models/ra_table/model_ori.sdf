@@ -16,13 +16,13 @@
         </inertia>
       </inertial-->
       <collision name="plate">
-        <pose>0 0 0.1025 0 0 0</pose>
+        <pose>0 0 0.205  0 0 0</pose>
         <geometry>
           <box> <size> 0.25 0.50 0.01 </size> </box>
         </geometry>
       </collision>
       <collision name="leg0">
-        <pose>0.105 0.23 0.05  0 0 0</pose>
+        <pose>0.105 0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
@@ -31,7 +31,7 @@
         </geometry>
       </collision>
       <collision name="leg1">
-        <pose>-0.105 0.23 0.05  0 0 0</pose>
+        <pose>-0.105 0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
@@ -40,7 +40,7 @@
         </geometry>
       </collision>
       <collision name="leg2">
-        <pose>0.105 -0.23 0.05  0 0 0</pose>
+        <pose>0.105 -0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
@@ -49,7 +49,7 @@
         </geometry>
       </collision>
       <collision name="leg3">
-        <pose>-0.105 -0.23 0.05  0 0 0</pose>
+        <pose>-0.105 -0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
@@ -63,7 +63,7 @@
         </material>
       -->
       <visual name="plate">
-        <pose>0 0 0.1025  0 0 0</pose>
+        <pose>0 0 0.205  0 0 0</pose>
         <geometry>
           <box> <size> 0.25 0.50 0.01 </size> </box>
         </geometry>
@@ -74,11 +74,11 @@
         </material>
       </visual>
       <visual name="leg0">
-        <pose>0.105 0.23 0.05  0 0 0</pose>
+        <pose>0.105 0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
-            <length>0.1</length>
+            <length>0.2</length>
           </cylinder>
         </geometry>
         <material>
@@ -88,11 +88,11 @@
         </material>
       </visual>
       <visual name="leg1">
-        <pose>-0.105 0.23 0.05  0 0 0</pose>
+        <pose>-0.105 0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
-            <length>0.1</length>
+            <length>0.2</length>
           </cylinder>
         </geometry>
         <material>
@@ -102,11 +102,11 @@
         </material>
       </visual>
       <visual name="leg2">
-        <pose>0.105 -0.23 0.05  0 0 0</pose>
+        <pose>0.105 -0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
-            <length>0.1</length>
+            <length>0.2</length>
           </cylinder>
         </geometry>
         <material>
@@ -116,11 +116,11 @@
         </material>
       </visual>
       <visual name="leg3">
-        <pose>-0.105 -0.23 0.05  0 0 0</pose>
+        <pose>-0.105 -0.23 0.1  0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.015</radius>
-            <length>0.1</length>
+            <length>0.2</length>
           </cylinder>
         </geometry>
         <material>
