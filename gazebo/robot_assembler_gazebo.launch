@@ -3,7 +3,7 @@
   <arg name="paused" default="false" />
   <!--arg name="gzangles" default="-J JOINT0 -0.2" / use with paused -->
   <!--arg name="gzangles" default="-J JOINT21 -0.60 -J JOINT28 0.60"/ this adjust the pose of the robot -->
-  <arg name="gzangles" default="-J JOINT0 0" />
+  <arg name="gzangles" default="-J JOINT18 0.2 -J JOINT25 -0.2 -J JOINT1 1.0 -J JOINT9 -1.0" />
   <!-- arg name="gzpose" default=" -z 0.2316" /-->
   <arg name="gzpose" default=" -z 0.258 -P 0.2"/>
   <!-- arg name="gzpose" default=" -z 0" /-->
