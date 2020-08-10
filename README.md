@@ -10,6 +10,39 @@ editor : shumpei wakabayashi
 
 ## How to run
 
+
+
+### Try grasping original robot arm by recognizing an object.
+
+Launch environment on gazebo.
+```
+$ roslaunch robot_assembler robot_assembler_gazebo.launch  model:=$(rospack find robot_assembler)/outputs/0810_robot.urdf use_xacro:=true paused:=true
+```
+
+Pre-grasp pose.
+```
+$ roscd robot_assembler 
+$ python gazebo/open_hand.py 
+```
+
+Launch HSI color filter.
+```
+$ roslaunch robot_assembler hsi_color_filter.launch 
+```
+
+Grasping!
+```
+$ roscd robot_assembler
+$ roseus gazebo/0810_robot_controller.l
+```
+
+
+
+
+
+
+
+
 ### Move arm when range sensor finds a object. 
 
 Launch FIXED_ARM_1 sample on gazebo.
